@@ -36,6 +36,12 @@ export function Home() {
       return;
     }
 
+    if (roomRef.val().endedAt) {
+      // eslint-disable-next-line no-alert
+      alert("Room already closed!");
+      return;
+    }
+
     history.push(`/rooms/${room}`);
   }
 
